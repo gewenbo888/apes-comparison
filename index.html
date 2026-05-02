@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chimpanzee · Bonobo · Human — A Field Comparison | 黑猩猩 · 倭黑猩猩 · 人类 — 一份现场对照</title>
+
+<meta name="description" content="A bilingual side-by-side comparison of chimpanzees, bonobos, and humans across biology, genetics, cognition, language, social structure, behavior, culture, habitat, ethics — plus a Human-vs-Primate-vs-AI section and a future-evolution module. Twelve sections, an interactive cognition radar chart, scientific sources cited.">
+<meta name="keywords" content="chimpanzee bonobo human comparison, great apes, hominidae, primate cognition, Pan troglodytes, Pan paniscus, Homo sapiens, evolutionary divergence, animal cognition, theory of mind, 黑猩猩 倭黑猩猩 人类 对比, 灵长类">
+<meta name="author" content="Gewenbo">
+<link rel="canonical" href="https://apes.psyverse.fun/">
+<link rel="alternate" hreflang="en" href="https://apes.psyverse.fun/">
+<link rel="alternate" hreflang="zh-CN" href="https://apes.psyverse.fun/">
+<link rel="alternate" hreflang="x-default" href="https://apes.psyverse.fun/">
+<meta property="og:title" content="Chimpanzee · Bonobo · Human — A Field Comparison">
+<meta property="og:description" content="Twelve dimensions, three closely related species, one bilingual atlas. Side-by-side comparison from genetics through ethics, with a Human-vs-Primate-vs-AI section.">
+<meta property="og:url" content="https://apes.psyverse.fun/">
+<meta property="og:site_name" content="Psyverse">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Chimpanzee · Bonobo · Human — A Field Comparison">
+<meta name="twitter:description" content="Two cousins and a stranger. A bilingual scientific comparison across 12 dimensions.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#1a1410">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"Chimpanzee · Bonobo · Human — A Field Comparison","description":"A bilingual side-by-side comparison of chimpanzees, bonobos, and humans.","url":"https://apes.psyverse.fun/","inLanguage":["en","zh-CN"],"author":{"@type":"Person","name":"Gewenbo","url":"https://psyverse.fun/"},"publisher":{"@type":"Organization","name":"Psyverse","url":"https://psyverse.fun/"}}
+</script>
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%231a1410'/><circle cx='10' cy='14' r='3.5' fill='%23d97706'/><circle cx='22' cy='14' r='3.5' fill='%23e11d48'/><circle cx='16' cy='22' r='3.5' fill='%230891b2'/></svg>">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  /* Dark (default) */
+  --bg: #1a1410;
+  --bg-2: #221a14;
+  --bg-3: #2c221b;
+  --line: #3a2f25;
+  --line-2: #4a3d30;
+  --fg: #f5ede0;
+  --fg-2: #c4b5a0;
+  --fg-3: #8a7a64;
+  /* Three-species palette */
+  --chimp: #d97706;        /* amber — Pan troglodytes */
+  --chimp-glow: #d9770644;
+  --bonobo: #e11d48;       /* rose — Pan paniscus */
+  --bonobo-glow: #e11d4844;
+  --human: #0891b2;        /* teal — Homo sapiens */
+  --human-glow: #0891b244;
+  --accent: #fbbf24;       /* amber highlight */
+  --green: #84cc16;
+  --shadow: rgba(0,0,0,.4);
+}
+body.light {
+  --bg: #faf6ee;
+  --bg-2: #f3ecdc;
+  --bg-3: #ebe2ce;
+  --line: #d8cdb6;
+  --line-2: #b8aa8e;
+  --fg: #2c2317;
+  --fg-2: #5a4a35;
+  --fg-3: #8a7a64;
+  --shadow: rgba(0,0,0,.08);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Space Grotesk', 'Noto Sans SC', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  transition: background .3s, color .3s;
+}
+.mono { font-family: 'JetBrains Mono', monospace; }
+.serif { font-family: 'Cormorant Garamond', 'Noto Serif SC', serif; }
+
+body::after {
+  content: ''; position: fixed; inset: 0;
+  background:
+    radial-gradient(circle at 15% 0%, rgba(217,119,6,.06), transparent 50%),
+    radial-gradient(circle at 85% 100%, rgba(8,145,178,.05), transparent 60%);
+  pointer-events: none; z-index: 0;
+}
+
+/* Nav */
+nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  height: 56px;
+  background: rgba(26,20,16,.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+  z-index: 100;
+  display: flex; align-items: center;
+  padding: 0 24px; gap: 14px;
+  transition: background .3s, border-color .3s;
+}
+body.light nav { background: rgba(250,246,238,.85); }
+nav .logo {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700; font-size: 12px;
+  display: flex; align-items: center; gap: 10px;
+  color: var(--fg); text-decoration: none;
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+}
+nav .logo .glyph {
+  display: flex; gap: 2px;
+  flex-shrink: 0;
+}
+nav .logo .glyph span {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+}
+nav .logo .glyph .c1 { background: var(--chimp); box-shadow: 0 0 6px var(--chimp-glow); }
+nav .logo .glyph .c2 { background: var(--bonobo); box-shadow: 0 0 6px var(--bonobo-glow); }
+nav .logo .glyph .c3 { background: var(--human); box-shadow: 0 0 6px var(--human-glow); }
+nav .links {
+  display: flex; gap: 12px;
+  margin-left: auto;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+}
+nav .links a { color: var(--fg-2); text-decoration: none; transition: color .15s; }
+nav .links a:hover { color: var(--accent); }
+nav button.ctl {
+  background: transparent; color: var(--fg-2);
+  border: 1px solid var(--line-2);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all .15s;
+}
+nav button.ctl:hover { color: var(--accent); border-color: var(--accent); }
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1;
+}
+.narrow { max-width: 820px; }
+
+/* Hero */
+.hero { padding: 120px 0 60px; }
+.tag {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--accent);
+  border: 1px solid var(--line-2);
+  border-radius: 100px;
+  padding: 6px 14px;
+  margin-bottom: 28px;
+}
+.tag .dot {
+  width: 6px; height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--accent);
+}
+h1 {
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', serif;
+  font-size: clamp(40px, 6vw, 68px);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  margin-bottom: 24px;
+  max-width: 18ch;
+}
+h1 .gradient {
+  background: linear-gradient(90deg, var(--chimp) 0%, var(--bonobo) 50%, var(--human) 100%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: italic;
+}
+.lede {
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', serif;
+  font-size: clamp(18px, 1.7vw, 22px);
+  color: var(--fg-2);
+  line-height: 1.5;
+  max-width: 60ch;
+  margin-bottom: 40px;
+  font-style: italic;
+}
+
+/* Three-species hero card grid */
+.trio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 40px 0;
+}
+.tcard {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--accent);
+  border-radius: 10px;
+  padding: 22px;
+  position: relative;
+  overflow: hidden;
+}
+.tcard.chimp  { border-top-color: var(--chimp); }
+.tcard.bonobo { border-top-color: var(--bonobo); }
+.tcard.human  { border-top-color: var(--human); }
+.tcard .sname {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.tcard.chimp .sname  { color: var(--chimp); }
+.tcard.bonobo .sname { color: var(--bonobo); }
+.tcard.human .sname  { color: var(--human); }
+.tcard .latin {
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', serif;
+  font-style: italic;
+  font-size: 13px;
+  color: var(--fg-3);
+  margin-bottom: 12px;
+}
+.tcard .name {
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--fg);
+  margin-bottom: 14px;
+  line-height: 1.1;
+}
+.tcard .desc {
+  font-family: 'Space Grotesk', 'Noto Sans SC', sans-serif;
+  font-size: 13px;
+  color: var(--fg-2);
+  line-height: 1.55;
+}
+
+.meta-row {
+  display: flex; gap: 20px; flex-wrap: wrap;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--fg-3);
+  margin: 16px 0 60px;
+}
+.meta-row b { color: var(--accent); font-weight: 500; }
+
+/* Section */
+section.chap {
+  padding: 80px 0;
+  border-top: 1px solid var(--line);
+  position: relative;
+  z-index: 1;
+}
+.chap-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  margin-bottom: 14px;
+  display: flex; align-items: center; gap: 12px;
+}
+.chap-num::before {
+  content: ''; width: 32px; height: 1px;
+  background: var(--accent);
+}
+.chap h2 {
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', serif;
+  font-size: clamp(28px, 3.6vw, 44px);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 24px;
+  line-height: 1.1;
+  max-width: 22ch;
+}
+.chap h3 {
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', serif;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 36px 0 14px;
+  color: var(--fg);
+}
+.chap p {
+  font-family: 'Space Grotesk', 'Noto Sans SC', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--fg-2);
+  margin-bottom: 18px;
+  max-width: 70ch;
+}
+.chap p strong { color: var(--fg); font-weight: 600; }
+.chap p em { color: var(--fg); font-style: italic; }
+.chap ul { font-family: 'Space Grotesk', 'Noto Sans SC', sans-serif; font-size: 16px; line-height: 1.65; color: var(--fg-2); margin: 0 0 22px 22px; max-width: 70ch; }
+.chap ul li { margin-bottom: 8px; }
+
+/* Comparison table */
+.cmp-wrap { overflow-x: auto; margin: 28px 0; }
+table.cmp {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+table.cmp th, table.cmp td {
+  text-align: left;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+  line-height: 1.55;
+}
+table.cmp th {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--fg-3);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  border-bottom: 1px solid var(--line-2);
+  background: var(--bg-2);
+}
+table.cmp th.chimp  { color: var(--chimp); border-bottom-color: var(--chimp); }
+table.cmp th.bonobo { color: var(--bonobo); border-bottom-color: var(--bonobo); }
+table.cmp th.human  { color: var(--human); border-bottom-color: var(--human); }
+table.cmp td:first-child { font-weight: 600; color: var(--fg); white-space: nowrap; font-family: 'JetBrains Mono', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+table.cmp td { color: var(--fg-2); }
+table.cmp td.hi { color: var(--fg); font-weight: 500; }
+
+/* Triple-column comparison cards */
+.tri-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 28px 0;
+}
+.tri-grid .tc {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 20px;
+  border-left: 3px solid var(--line-2);
+}
+.tri-grid .tc.chimp  { border-left-color: var(--chimp); }
+.tri-grid .tc.bonobo { border-left-color: var(--bonobo); }
+.tri-grid .tc.human  { border-left-color: var(--human); }
+.tri-grid .tc .label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+.tri-grid .tc.chimp  .label { color: var(--chimp); }
+.tri-grid .tc.bonobo .label { color: var(--bonobo); }
+.tri-grid .tc.human  .label { color: var(--human); }
+.tri-grid .tc p {
+  font-family: 'Space Grotesk', 'Noto Sans SC', sans-serif;
+  font-size: 14px;
+  color: var(--fg-2);
+  line-height: 1.55;
+  margin: 0;
+}
+.tri-grid .tc strong { color: var(--fg); }
+
+/* Glossary */
+.gloss {
+  border-bottom: 1px dotted var(--accent);
+  cursor: help;
+  position: relative;
+  color: var(--fg);
+}
+.gloss::after {
+  content: attr(data-def);
+  position: absolute;
+  bottom: 100%; left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  background: var(--bg-3);
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13px; font-style: normal;
+  color: var(--fg);
+  width: 280px;
+  white-space: normal;
+  line-height: 1.4;
+  opacity: 0; pointer-events: none;
+  transition: opacity .15s, transform .15s;
+  z-index: 50;
+  box-shadow: 0 4px 20px var(--shadow);
+}
+.gloss:hover::after { opacity: 1; transform: translateX(-50%) translateY(-4px); }
+
+/* Phylogenetic tree */
+.tree {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 28px 20px;
+  margin: 28px 0;
+  overflow-x: auto;
+}
+.tree pre {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--fg-2);
+  line-height: 1.6;
+  white-space: pre;
+}
+.tree pre .chimp  { color: var(--chimp); font-weight: 600; }
+.tree pre .bonobo { color: var(--bonobo); font-weight: 600; }
+.tree pre .human  { color: var(--human); font-weight: 600; }
+.tree pre .node   { color: var(--accent); }
+.tree pre .y      { color: var(--fg-3); }
+
+/* Cognition radar chart */
+.radar-wrap {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 28px 24px;
+  margin: 28px 0;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 28px;
+  align-items: center;
+}
+@media (max-width: 768px) { .radar-wrap { grid-template-columns: 1fr; } }
+#radar-canvas {
+  width: 100%;
+  max-width: 460px;
+  display: block;
+}
+.radar-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 240px;
+}
+.radar-controls .tt {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--fg-3);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+}
+.species-toggle {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13px;
+  transition: border-color .15s;
+}
+.species-toggle:hover { border-color: var(--line-2); }
+.species-toggle.active { border-color: currentColor; background: rgba(0,0,0,.15); }
+body.light .species-toggle.active { background: rgba(0,0,0,.04); }
+.species-toggle.chimp.active  { color: var(--chimp); }
+.species-toggle.bonobo.active { color: var(--bonobo); }
+.species-toggle.human.active  { color: var(--human); }
+.species-toggle .sw {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.species-toggle.chimp .sw  { background: var(--chimp); }
+.species-toggle.bonobo .sw { background: var(--bonobo); }
+.species-toggle.human .sw  { background: var(--human); }
+
+/* Filter chips */
+.chips {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 16px 0 28px;
+}
+.chip {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  padding: 6px 12px;
+  border-radius: 100px;
+  background: var(--bg-2);
+  color: var(--fg-2);
+  border: 1px solid var(--line);
+  cursor: pointer;
+  transition: all .15s;
+  user-select: none;
+}
+.chip:hover { color: var(--fg); border-color: var(--line-2); }
+.chip.active { color: var(--accent); border-color: var(--accent); background: var(--bg-3); }
+
+/* Insight callout */
+.insight {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+  padding: 22px 24px;
+  margin: 28px 0;
+}
+.insight .lab {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+}
+.insight p {
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', serif;
+  font-size: 18px;
+  color: var(--fg);
+  line-height: 1.55;
+  margin: 0;
+  font-style: italic;
+}
+
+/* AI comparison three-column */
+.aitri {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 28px 0;
+}
+.aitri .acard {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 22px;
+  position: relative;
+  overflow: hidden;
+}
+.aitri .acard.primate { border-top: 3px solid var(--chimp); }
+.aitri .acard.human   { border-top: 3px solid var(--human); }
+.aitri .acard.ai      { border-top: 3px solid var(--green); }
+.aitri .acard h4 {
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', serif;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 8px 0 14px;
+  color: var(--fg);
+}
+.aitri .acard .lab {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.aitri .acard.primate .lab { color: var(--chimp); }
+.aitri .acard.human   .lab { color: var(--human); }
+.aitri .acard.ai      .lab { color: var(--green); }
+.aitri .acard ul {
+  list-style: none;
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--fg-2);
+}
+.aitri .acard ul li {
+  padding: 8px 0;
+  border-top: 1px dashed var(--line);
+}
+.aitri .acard ul li:first-child { border-top: none; padding-top: 0; }
+.aitri .acard ul li b { color: var(--fg); display: block; margin-bottom: 2px; font-weight: 600; }
+
+/* References */
+.refs {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--fg-3);
+  line-height: 1.7;
+  margin: 28px 0;
+  padding: 20px 24px;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.refs strong {
+  display: block;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+.refs ol { margin: 0 0 0 18px; }
+.refs ol li { margin-bottom: 6px; color: var(--fg-2); }
+.refs ol li em { font-style: italic; color: var(--fg); }
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--line);
+  padding: 56px 0 80px;
+  margin-top: 60px;
+  position: relative;
+  z-index: 1;
+}
+.foot-bottom {
+  margin-top: 28px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 12px;
+  color: var(--fg-3);
+  font-family: 'JetBrains Mono', monospace;
+}
+.foot-bottom a { color: var(--accent); text-decoration: none; }
+
+/* Bilingual */
+.zh { display: none; }
+body.zh-mode .en { display: none; }
+body.zh-mode .zh { display: revert; }
+body.zh-mode { font-family: 'Noto Sans SC', 'Space Grotesk', sans-serif; }
+body.zh-mode h1, body.zh-mode .chap h2, body.zh-mode .chap h3,
+body.zh-mode .lede, body.zh-mode .insight p, body.zh-mode .tcard .name,
+body.zh-mode .aitri .acard h4 {
+  font-family: 'Noto Serif SC', 'Cormorant Garamond', serif;
+}
+body.zh-mode nav, body.zh-mode .mono, body.zh-mode .meta-row,
+body.zh-mode .chap-num, body.zh-mode .tag, body.zh-mode .tree pre,
+body.zh-mode table.cmp th, body.zh-mode table.cmp td:first-child,
+body.zh-mode .tri-grid .tc .label, body.zh-mode .insight .lab,
+body.zh-mode .aitri .acard .lab, body.zh-mode .chip, body.zh-mode .refs,
+body.zh-mode .radar-controls .tt, body.zh-mode .foot-bottom,
+body.zh-mode .tcard .sname, body.zh-mode .tcard .latin {
+  font-family: 'JetBrains Mono', 'Noto Sans SC', monospace;
+}
+
+/* Reveal */
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity .6s, transform .6s; }
+.reveal.in { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 768px) {
+  nav .links { display: none; }
+  .trio { grid-template-columns: 1fr; }
+  .tri-grid { grid-template-columns: 1fr; }
+  .aitri { grid-template-columns: 1fr; }
+  .radar-wrap { grid-template-columns: 1fr; }
+  .hero { padding: 90px 0 40px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="#"><span class="glyph"><span class="c1"></span><span class="c2"></span><span class="c3"></span></span> <span class="en">CHIMP · BONOBO · HUMAN</span><span class="zh">黑猩猩 · 倭黑猩猩 · 人类</span></a>
+  <div class="links">
+    <a href="#overview"><span class="en">Overview</span><span class="zh">概览</span></a>
+    <a href="#physical"><span class="en">Physical</span><span class="zh">体征</span></a>
+    <a href="#genetics"><span class="en">Genetics</span><span class="zh">基因</span></a>
+    <a href="#cognition"><span class="en">Cognition</span><span class="zh">认知</span></a>
+    <a href="#social"><span class="en">Social</span><span class="zh">社会</span></a>
+    <a href="#culture"><span class="en">Culture</span><span class="zh">文化</span></a>
+    <a href="#ethics"><span class="en">Ethics</span><span class="zh">伦理</span></a>
+    <a href="#ai"><span class="en">vs AI</span><span class="zh">对比 AI</span></a>
+  </div>
+  <button class="ctl" id="lang-btn" onclick="document.body.classList.toggle('zh-mode')">EN / 中文</button>
+  <button class="ctl" id="theme-btn" onclick="document.body.classList.toggle('light'); this.textContent=document.body.classList.contains('light')?'☾':'☀'">☀</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="tag"><span class="dot"></span> <span class="en">12 dimensions · 3 closely related species · 1 bilingual atlas</span><span class="zh">12 个维度 · 3 个近亲物种 · 1 份双语图谱</span></div>
+    <h1>
+      <span class="en">Two cousins<br>and a <span class="gradient">stranger</span>.</span>
+      <span class="zh">两位近亲<br>与一位<span class="gradient">陌生人</span>。</span>
+    </h1>
+    <p class="lede">
+      <span class="en">Chimpanzees and bonobos share a common ancestor with us 6 million years ago. They share one with each other only ~1 million years ago. Yet the two of them are nearly identical, while we built civilizations. This page explores why — across genes, cognition, society, and the question of what "human" actually means.</span>
+      <span class="zh">黑猩猩与我们的最近共同祖先生活在 600 万年前。它们彼此之间的最近共同祖先则只追溯到约 100 万年前。然而它们两者几乎完全相同——而我们建立了文明。本页探究其中缘由——从基因、认知、社会，到「人之所以为人」这一问题。</span>
+    </p>
+
+    <!-- Trio cards -->
+    <div class="trio">
+      <div class="tcard chimp">
+        <div class="sname">Common Chimpanzee · 黑猩猩</div>
+        <div class="latin">Pan troglodytes</div>
+        <div class="name"><span class="en">The Politician</span><span class="zh">政治家</span></div>
+        <p class="desc"><span class="en">Hierarchical, alliance-driven, capable of strategic violence. Tool-using, patrilocal, mostly omnivorous. ~300,000 in the wild.</span><span class="zh">等级分明、依赖联盟、具备战略性暴力能力。会使用工具，雌性外迁，杂食为主。野外约 30 万只。</span></p>
+      </div>
+      <div class="tcard bonobo">
+        <div class="sname">Bonobo · 倭黑猩猩</div>
+        <div class="latin">Pan paniscus</div>
+        <div class="name"><span class="en">The Diplomat</span><span class="zh">外交家</span></div>
+        <p class="desc"><span class="en">Female-bonded, sexually mediated conflict resolution, strikingly low intra-group violence. Confined to one country (DRC). ~15,000–20,000 in the wild.</span><span class="zh">雌性结盟，以性行为化解冲突，群内暴力惊人地低。仅分布于刚果民主共和国一国。野外约 1.5-2 万只。</span></p>
+      </div>
+      <div class="tcard human">
+        <div class="sname">Human · 智人</div>
+        <div class="latin">Homo sapiens</div>
+        <div class="name"><span class="en">The Outlier</span><span class="zh">异类</span></div>
+        <p class="desc"><span class="en">Symbolic language, multi-level cooperation with strangers, cumulative culture. ~8.1 billion alive. The only Homo lineage left of at least nine that once existed.</span><span class="zh">具备符号化语言、与陌生人多层级协作、累积性文化。在世人口约 81 亿。曾共存的至少九支人属世系中如今唯一幸存者。</span></p>
+      </div>
+    </div>
+
+    <div class="meta-row">
+      <span><span class="en">Compiled</span><span class="zh">编纂</span> <b>April 2026</b></span>
+      <span><span class="en">~20 min read</span><span class="zh">约 20 分钟</span></span>
+      <span><span class="en">Sections</span><span class="zh">章节</span> <b>12</b></span>
+      <span><span class="en">Sources</span><span class="zh">参考</span> <b>15</b></span>
+    </div>
+  </div>
+</section>
+
+<!-- 1 OVERVIEW -->
+<section class="chap reveal" id="overview">
+  <div class="container narrow">
+    <div class="chap-num">01 · TAXONOMY &amp; ANCESTRY</div>
+    <h2><span class="en">A family of three</span><span class="zh">一个三口之家</span></h2>
+    <p>
+      <span class="en">All three species belong to the family <em>Hominidae</em> — the great apes. The chimpanzee and the bonobo share genus <em>Pan</em>; humans are alone in genus <em>Homo</em> after the extinction of every other lineage (Neanderthals, Denisovans, <em>floresiensis</em>, <em>erectus</em>, and at least five more). The <span class="gloss" data-def="The most recent common ancestor — the most recent population from which two lineages diverged.">MRCA</span> of humans + chimps + bonobos lived ~6 million years ago. The MRCA of chimps + bonobos lived ~1 million years ago, when the Congo River formed and split a single ancestral population.</span>
+      <span class="zh">三个物种皆属<em>人科（Hominidae）</em>——大猩猩、猩猩、黑猩猩、人类共此一科。黑猩猩与倭黑猩猩同属<em>黑猩猩属（Pan）</em>；人类则在所有其他人属世系（尼安德特人、丹尼索瓦人、<em>佛罗勒斯人</em>、<em>直立人</em>，以及至少五种）灭绝后，独占<em>人属（Homo）</em>。人 + 黑猩猩 + 倭黑猩猩的<span class="gloss" data-def="最近共同祖先——两个世系分化前最近的祖先种群。">最近共同祖先</span>生活在约 600 万年前。黑猩猩与倭黑猩猩的最近共同祖先约 100 万年前——当时刚果河形成，将单一祖先种群一分为二。</span>
+    </p>
+
+    <div class="tree">
+<pre>             ┌─── <span class="chimp">Pan troglodytes</span>  (Chimpanzee, north of Congo River)
+        ┌───┤
+   ┌───┤    └─── <span class="bonobo">Pan paniscus</span>     (Bonobo, south of Congo River)   <span class="y">~1 Mya split</span>
+   │   │
+   │   └──────── <span class="human">Homo sapiens</span>      (Human · all extant)              <span class="y">~6 Mya split from Pan</span>
+   │
+   └──────────── Gorilla, Orangutan, Gibbon, Old World monkeys ...
+
+<span class="node">Family:</span>   Hominidae    (great apes)
+<span class="node">Tribe:</span>    Hominini     (us + Pan; gorillas excluded)
+<span class="node">Subtribe:</span> Hominina     (us alone — every other Homo line is extinct)</pre>
+    </div>
+
+    <div class="insight">
+      <div class="lab"><span class="en">Surprising Fact</span><span class="zh">意外事实</span></div>
+      <p><span class="en">Chimpanzees and bonobos look almost identical to most observers — but they have been on different evolutionary trajectories for as long as elephants have been distinct from manatees. Bonobos likely owe their entire existence to the Congo River.</span><span class="zh">在多数观察者看来，黑猩猩与倭黑猩猩几乎相同——但二者沿不同进化轨迹已分化的时间，与象类同海牛类分化的时间一样长。倭黑猩猩的整个存在很可能完全归功于刚果河。</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- 2 PHYSICAL -->
+<section class="chap reveal" id="physical">
+  <div class="container">
+    <div class="chap-num">02 · PHYSICAL CHARACTERISTICS</div>
+    <h2><span class="en">Body, brain, lifespan</span><span class="zh">身体、大脑、寿命</span></h2>
+
+    <div class="cmp-wrap">
+      <table class="cmp">
+        <thead>
+          <tr>
+            <th><span class="en">Trait</span><span class="zh">特征</span></th>
+            <th class="chimp">Chimpanzee · 黑猩猩</th>
+            <th class="bonobo">Bonobo · 倭黑猩猩</th>
+            <th class="human">Human · 人类</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Adult Mass (M / F)</td><td>40–60 kg / 32–47 kg</td><td>39–45 kg / 31–38 kg</td><td class="hi">~70–85 kg / ~55–70 kg (varies)</td></tr>
+          <tr><td>Standing Height</td><td>~1.5 m</td><td>~1.4 m</td><td class="hi">~1.6–1.8 m</td></tr>
+          <tr><td>Brain Volume</td><td>~370 cc</td><td>~360 cc</td><td class="hi">~1,350 cc (~3.7×)</td></tr>
+          <tr><td><span class="en">Sexual Dimorphism</span><span class="zh">两性差异</span></td><td>Strong (males ~25% larger)</td><td>Reduced (males ~15% larger)</td><td class="hi">Modest (males ~15% larger by mass)</td></tr>
+          <tr><td><span class="en">Lifespan (wild)</span><span class="zh">野外寿命</span></td><td>~30–35 years</td><td>~35–40 years</td><td class="hi">~70–80 years (modern)</td></tr>
+          <tr><td><span class="en">Locomotion</span><span class="zh">运动方式</span></td><td>Knuckle-walking + brachiation</td><td>Knuckle-walking + bipedal more often than chimps</td><td class="hi">Obligate bipedalism</td></tr>
+          <tr><td><span class="en">Strength (relative)</span><span class="zh">相对力量</span></td><td>~1.35× human pull-strength (per kg)</td><td>Similar to chimp</td><td class="hi">Lower per-kg strength; vastly higher endurance</td></tr>
+          <tr><td><span class="en">Endurance Running</span><span class="zh">长跑耐力</span></td><td>Limited (no sweat cooling)</td><td>Limited</td><td class="hi">Class-leading among mammals (sweat cooling)</td></tr>
+          <tr><td><span class="en">Diet</span><span class="zh">饮食</span></td><td>Omnivore (incl. occasional hunting)</td><td>Frugivore, less hunting than chimp</td><td class="hi">Obligate omnivore (cooked food adapted)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="insight">
+      <div class="lab"><span class="en">Worth Noting</span><span class="zh">值得注意</span></div>
+      <p><span class="en">A chimpanzee can pull 1.35× as much as a human per kilogram of body mass — but a human can run 100+ km in a day. Our musculoskeletal evolution traded raw strength for thermoregulation and persistence hunting. Brawn for brain — and lungs.</span><span class="zh">黑猩猩按千克体重计算的拉力是人类的 1.35 倍——但人类一天可奔跑 100 公里以上。我们的肌肉骨骼演化以原始力量换取了体温调节与耐力狩猎。蛮力换大脑——以及肺。</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- 3 GENETICS -->
+<section class="chap reveal" id="genetics">
+  <div class="container narrow">
+    <div class="chap-num">03 · GENETICS &amp; EVOLUTION</div>
+    <h2><span class="en">98.7% identical, 100% different</span><span class="zh">98.7% 相同，100% 不同</span></h2>
+    <p>
+      <span class="en">Humans and chimpanzees share <strong>~98.7%</strong> of single-nucleotide DNA. Humans and bonobos share approximately the same. Bonobos and chimpanzees share <strong>~99.6%</strong> of their DNA — closer to each other than either is to us, but only barely.</span>
+      <span class="zh">人类与黑猩猩在单核苷酸 DNA 上共享约 <strong>98.7%</strong>。人与倭黑猩猩亦相近。倭黑猩猩与黑猩猩共享约 <strong>99.6%</strong>——彼此较与我们更近，但差距微小。</span>
+    </p>
+    <p>
+      <span class="en">"98.7% similar" understates the difference dramatically. The human genome differs from chimps by ~35 million single-base substitutions, ~5 million insertions/deletions, dozens of large structural rearrangements, and one entire chromosome fusion (human chromosome 2 = fusion of two ancestral ape chromosomes). The interesting differences are not <em>where</em> the bases differ, but <em>which genes</em> are turned on, off, faster, or slower.</span>
+      <span class="zh">「98.7% 相似」严重低估了差异。人类基因组与黑猩猩相比有约 3500 万个单碱基替换、约 500 万个插入/缺失、数十处大型结构重排，以及一次完整的染色体融合（人类 2 号染色体 = 两条祖先猿类染色体融合）。真正有趣的差异不在于<em>哪些</em>碱基不同，而在于<em>哪些基因</em>被开启、关闭、加速或减速。</span>
+    </p>
+
+    <h3><span class="en">Key human-specific genetic changes</span><span class="zh">关键的人类特异性基因变化</span></h3>
+    <div class="tri-grid">
+      <div class="tc human">
+        <div class="label">FOXP2</div>
+        <p><span class="en"><strong>Speech / language gene.</strong> Two amino-acid changes from the chimp version. Mutations in humans cause severe speech-motor disorders.</span><span class="zh"><strong>语言基因。</strong>较黑猩猩版本有两处氨基酸变化。人类该基因突变导致严重的言语运动障碍。</span></p>
+      </div>
+      <div class="tc human">
+        <div class="label">HAR1</div>
+        <p><span class="en"><strong>Brain-development RNA.</strong> Most rapidly-evolved region of the human genome since divergence from chimps. Active in cortex layers 2–7 during fetal development.</span><span class="zh"><strong>大脑发育 RNA。</strong>自与黑猩猩分化以来人类基因组中演化最快的区段。胎儿期在皮层 2-7 层活跃。</span></p>
+      </div>
+      <div class="tc human">
+        <div class="label">SRGAP2C</div>
+        <p><span class="en"><strong>Synapse-density gene.</strong> A human-specific duplication active during cortical development. Plausibly linked to longer neural-circuit maturation in childhood.</span><span class="zh"><strong>突触密度基因。</strong>一次人类特异性的基因重复，在皮层发育期活跃。可能与儿童期更长的神经回路成熟期相关。</span></p>
+      </div>
+    </div>
+
+    <div class="insight">
+      <div class="lab"><span class="en">Counterintuitive</span><span class="zh">反直觉</span></div>
+      <p><span class="en">Two random humans differ from each other by ~0.1% of single-base DNA. Two chimps from different forests differ by ~0.4% — chimpanzees have nearly four times the within-species genetic diversity humans do. We are the genetic monoculture of the great apes.</span><span class="zh">任意两个人之间的单碱基 DNA 差异约为 0.1%。两只来自不同森林的黑猩猩相差约 0.4%——黑猩猩种内基因多样性是人类的近四倍。在大猿之中，人类才是基因单一的物种。</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- 4 COGNITION -->
+<section class="chap reveal" id="cognition">
+  <div class="container">
+    <div class="chap-num">04 · INTELLIGENCE &amp; COGNITION</div>
+    <h2><span class="en">Where the gap actually opens</span><span class="zh">差距究竟在何处拉开</span></h2>
+    <p>
+      <span class="en">On most individual cognitive tests, chimpanzees and bonobos are surprisingly close to humans — and on some specific tasks (working-memory speed, certain spatial recall), young chimps actually <em>beat</em> human adults. Where the gap opens dramatically is in <strong>cumulative culture</strong>, <strong>shared intentionality</strong>, and <strong>language-mediated abstraction</strong>. The radar below is approximate, drawn from de Waal, Tomasello, and Inoue/Matsuzawa.</span>
+      <span class="zh">在多数单项认知测试上，黑猩猩与倭黑猩猩与人类的距离出奇接近——在某些具体任务（工作记忆速度、特定空间回忆）上，幼年黑猩猩甚至<em>超越</em>成年人。差距真正拉开是在<strong>累积性文化</strong>、<strong>共享意图</strong>与<strong>语言中介的抽象</strong>这三处。下方雷达图为近似值，参考 de Waal、Tomasello、Inoue/Matsuzawa。</span>
+    </p>
+
+    <div class="radar-wrap">
+      <canvas id="radar-canvas" width="500" height="500"></canvas>
+      <div class="radar-controls">
+        <div class="tt"><span class="en">Toggle species</span><span class="zh">切换物种</span></div>
+        <div class="species-toggle chimp active" data-sp="chimp"><span class="sw"></span> <span><span class="en">Chimpanzee</span><span class="zh">黑猩猩</span></span></div>
+        <div class="species-toggle bonobo active" data-sp="bonobo"><span class="sw"></span> <span><span class="en">Bonobo</span><span class="zh">倭黑猩猩</span></span></div>
+        <div class="species-toggle human active" data-sp="human"><span class="sw"></span> <span><span class="en">Human</span><span class="zh">人类</span></span></div>
+        <div class="tt" style="margin-top:14px;"><span class="en">8 cognitive dimensions · scores approximate</span><span class="zh">8 项认知维度 · 评分为近似</span></div>
+      </div>
+    </div>
+
+    <div class="tri-grid">
+      <div class="tc chimp">
+        <div class="label"><span class="en">Chimp · Mirror Test</span><span class="zh">黑猩猩 · 镜像测试</span></div>
+        <p><span class="en">Pass. ~75% recognize self in mirror after habituation (Gallup 1970). Self-awareness consistently demonstrated.</span><span class="zh">通过。习惯化后约 75% 能在镜中识别自我（Gallup 1970）。自我意识持续展现。</span></p>
+      </div>
+      <div class="tc bonobo">
+        <div class="label"><span class="en">Bonobo · Tool Use</span><span class="zh">倭黑猩猩 · 工具使用</span></div>
+        <p><span class="en">Less prolific than chimps in the wild (perhaps because food is more abundant). Captive bonobos (e.g. Kanzi) demonstrate sophisticated tool-making rivaling chimps.</span><span class="zh">野外不如黑猩猩频繁（或因食物更充裕）。圈养倭黑猩猩（如 Kanzi）展示出与黑猩猩相当的精细工具制作。</span></p>
+      </div>
+      <div class="tc human">
+        <div class="label"><span class="en">Human · Cumulative Culture</span><span class="zh">人类 · 累积性文化</span></div>
+        <p><span class="en">The "ratchet effect" — children faithfully copy and improve. Knowledge accumulates across generations indefinitely. The single largest cognitive difference, per Tomasello.</span><span class="zh">「棘轮效应」——儿童忠实地模仿并改进。知识可跨代无限积累。据 Tomasello，这是最大的单一认知差异。</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 LANGUAGE -->
+<section class="chap reveal" id="language">
+  <div class="container narrow">
+    <div class="chap-num">05 · LANGUAGE &amp; COMMUNICATION</div>
+    <h2><span class="en">The 200-symbol ceiling</span><span class="zh">200 个符号的天花板</span></h2>
+    <p>
+      <span class="en">Chimps in the wild use ~30 distinct vocalizations + a much richer repertoire of gestures (~80+ documented, with semantic meanings shared with bonobos and humans). Captive trained bonobos like <span class="gloss" data-def="A bonobo born 1980, raised by Sue Savage-Rumbaugh; learned ~3,000 spoken English words and used a lexigram board with 200+ symbols to compose simple novel utterances.">Kanzi</span> reach 200+ lexigram symbols. None — even with intense human-led training — produce the recursive, generative, infinite-output structure of human language.</span>
+      <span class="zh">野外黑猩猩使用约 30 种不同的发声 + 更丰富的手势库（已记录 80+，部分语义与倭黑猩猩、人类共享）。受训的圈养倭黑猩猩如<span class="gloss" data-def="生于 1980 年，由 Sue Savage-Rumbaugh 抚养的倭黑猩猩；学会约 3000 个英语口语词汇，使用 200+ 符号的图符板可组合简单的新句。">Kanzi</span> 可达 200+ 个图符。但即便经强化人类训练，没有任何一只能产生人类语言那种递归、生成、无限输出的结构。</span>
+    </p>
+
+    <div class="cmp-wrap">
+      <table class="cmp">
+        <thead>
+          <tr>
+            <th><span class="en">Capability</span><span class="zh">能力</span></th>
+            <th class="chimp">Chimp</th>
+            <th class="bonobo">Bonobo</th>
+            <th class="human">Human</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="en">Vocal repertoire</span><span class="zh">发声谱</span></td><td>~30 calls</td><td>~30 calls</td><td class="hi">Tens of thousands of words</td></tr>
+          <tr><td><span class="en">Gestural repertoire</span><span class="zh">手势谱</span></td><td>~80+ gestures</td><td>~80+ (50%+ shared with chimps)</td><td class="hi">Sign languages = full grammars</td></tr>
+          <tr><td><span class="en">Trained symbols (peak)</span><span class="zh">训练符号（峰值）</span></td><td>~150 (Washoe, ASL)</td><td>~200+ (Kanzi, lexigram)</td><td class="hi">~50,000 (educated adult)</td></tr>
+          <tr><td><span class="en">Recursion</span><span class="zh">递归</span></td><td>Not demonstrated</td><td>Not demonstrated</td><td class="hi">Universal feature</td></tr>
+          <tr><td><span class="en">Displacement (talk about absent)</span><span class="zh">位移（谈论不在场之事）</span></td><td>Limited (some food calls)</td><td>Limited</td><td class="hi">Universal</td></tr>
+          <tr><td><span class="en">Pedagogical use</span><span class="zh">教学使用</span></td><td>Rare</td><td>Rare</td><td class="hi">Universal</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 6 SOCIAL -->
+<section class="chap reveal" id="social">
+  <div class="container">
+    <div class="chap-num">06 · SOCIAL STRUCTURE</div>
+    <h2><span class="en">Two opposite societies, one genus</span><span class="zh">同一属下的两种相反社会</span></h2>
+    <p>
+      <span class="en">This is the most striking divergence in the entire comparison. Two species share &gt;99.6% of their DNA and yet organize themselves on opposite ethical principles. Chimpanzees: <strong>male-dominated, alliance-based, capable of organized lethal raids</strong>. Bonobos: <strong>female-bonded, sexually-reconciliatory, near-zero lethal in-group violence ever observed</strong>. If you wanted a single proof that culture matters more than genes, this is it.</span>
+      <span class="zh">这是整张对照表中最惊人的分化。两个物种共享 &gt;99.6% 的 DNA，却以完全相反的伦理原则组织自身。黑猩猩：<strong>雄性主导、依靠联盟、能进行有组织的致命袭击</strong>。倭黑猩猩：<strong>雌性结盟、以性行为化解冲突、群内致命暴力的观察记录近乎为零</strong>。若想要一个「文化重于基因」的单一证明，便是这里。</span>
+    </p>
+
+    <div class="tri-grid">
+      <div class="tc chimp">
+        <div class="label"><span class="en">Chimpanzee Social</span><span class="zh">黑猩猩社会</span></div>
+        <p><span class="en"><strong>Strict male hierarchy.</strong> Alpha males maintain power via coalitions; dominance challenges and reconciliations are constant. Females transfer between groups. Periodic raids on neighboring groups documented since Goodall 1974, including infanticide and killing.</span><span class="zh"><strong>严格雄性等级。</strong>雄性首领通过联盟维持权力；统治挑战与和解持续不断。雌性在群间迁徙。自 1974 年 Goodall 起，已记录对邻群的周期性袭击，包括杀婴与杀戮。</span></p>
+      </div>
+      <div class="tc bonobo">
+        <div class="label"><span class="en">Bonobo Social</span><span class="zh">倭黑猩猩社会</span></div>
+        <p><span class="en"><strong>Female-bonded matriarchy.</strong> Unrelated adult females form lifelong alliances; sons maintain status via their mother. Inter-group encounters often involve sexual contact, food sharing, and play — not warfare. Frans de Waal's life-long emphasis.</span><span class="zh"><strong>雌性结盟的母系社会。</strong>非血缘成年雌性结成终身联盟；儿子借助母亲维持地位。群间相遇常涉性接触、分享食物、嬉戏——而非战争。Frans de Waal 一生研究的重点。</span></p>
+      </div>
+      <div class="tc human">
+        <div class="label"><span class="en">Human Social</span><span class="zh">人类社会</span></div>
+        <p><span class="en"><strong>Massively variable.</strong> Egalitarian foragers, agrarian patriarchies, modern democracies — humans construct social systems that range across the entire chimp-bonobo spectrum and beyond. Cooperation with non-kin <em>strangers</em> is a uniquely human extreme.</span><span class="zh"><strong>变异极大。</strong>平等的采集者、父权农耕社会、现代民主——人类构造的社会系统跨越整个黑猩猩-倭黑猩猩光谱并更进一步。与非血缘<em>陌生人</em>的协作是人类独有的极端。</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 BEHAVIOR -->
+<section class="chap reveal" id="behavior">
+  <div class="container narrow">
+    <div class="chap-num">07 · BEHAVIOR &amp; PSYCHOLOGY</div>
+    <h2><span class="en">Aggression, sex, and bonding</span><span class="zh">攻击、性与联结</span></h2>
+
+    <h3><span class="en">Aggression vs empathy</span><span class="zh">攻击 vs 共情</span></h3>
+    <p>
+      <span class="en">All three species show <strong>both</strong> aggression and empathy — including consolation behavior, where uninvolved bystanders comfort victims of conflict. Bonobos consistently rank highest on consolation; chimpanzees variably; humans range from extreme empathy to extreme cruelty depending on culture and circumstance. The "killer ape vs hippie ape" dichotomy is real but oversimplified.</span>
+      <span class="zh">三个物种都<strong>同时</strong>表现出攻击与共情——包括「安抚行为」，即无关旁观者会安慰冲突受害者。倭黑猩猩在安抚行为上一贯排名最高；黑猩猩表现不一；人类则视文化与情境，从极端共情到极端残酷不等。「杀手猿 vs 嬉皮猿」的二分法虽然真实，但过于简化。</span>
+    </p>
+
+    <h3><span class="en">Sexual behavior</span><span class="zh">性行为</span></h3>
+    <ul>
+      <li><span class="en"><strong>Chimps:</strong> Promiscuous mating during female estrus; sex serves reproduction primarily.</span><span class="zh"><strong>黑猩猩：</strong>雌性发情期内多重交配；性行为主要服务于生殖。</span></li>
+      <li><span class="en"><strong>Bonobos:</strong> Sexual contact across age, sex, and context — used to defuse tension, build alliances, share food. The "make love, not war" species.</span><span class="zh"><strong>倭黑猩猩：</strong>性接触跨越年龄、性别、情境——用于缓解紧张、建立联盟、分享食物。所谓「做爱不作战」之物种。</span></li>
+      <li><span class="en"><strong>Humans:</strong> Concealed ovulation, year-round sexual receptivity, pair-bonding (variable across cultures), and sex tightly entangled with social meaning. Closer to bonobos than to chimps in this dimension.</span><span class="zh"><strong>人类：</strong>排卵隐蔽、全年性接受、形成配偶（文化差异大），性与社会意义紧密交织。在此维度上更接近倭黑猩猩而非黑猩猩。</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 8 CULTURE -->
+<section class="chap reveal" id="culture">
+  <div class="container narrow">
+    <div class="chap-num">08 · CULTURE &amp; LEARNING</div>
+    <h2><span class="en">The ratchet that doesn't slip</span><span class="zh">永不打滑的棘轮</span></h2>
+    <p>
+      <span class="en">Chimpanzee groups in different forests use different tools (nut-cracking stones in Tai forest, termite-fishing sticks in Gombe, ant-dipping wands elsewhere). These are <em>cultural</em> traditions — learned, not genetic. Bonobos show culture too, including regional differences in greeting and play patterns. But in both species, cultural complexity <em>plateaus</em>. Knowledge is transmitted but rarely <em>improved upon</em>.</span>
+      <span class="zh">不同森林的黑猩猩群使用不同工具（塔伊森林的敲坚果石、贡贝的钓白蚁棒、他处的蘸蚁杖）。这些是<em>文化</em>传统——后天习得，非遗传。倭黑猩猩也有文化，包括问候与嬉戏模式的地区差异。但在两个物种中，文化复杂度均会<em>触顶</em>。知识被传递，但鲜有<em>改进</em>。</span>
+    </p>
+    <p>
+      <span class="en">Humans uniquely <strong>improve</strong> on what they learn — and the improvements stick. This is Tomasello's "ratchet effect": each generation receives the previous generation's best version and adds to it. After 10,000 such steps, you get civilization. After 0, you get a chimp with a stick.</span>
+      <span class="zh">人类独特地<strong>改进</strong>所学——并将改进保留下来。这就是 Tomasello 所谓「棘轮效应」：每一代接收前代的最佳版本并在其上添加。经 10,000 次这样的迭代，便有了文明。而 0 次迭代，则只有一只拿棒子的黑猩猩。</span>
+    </p>
+  </div>
+</section>
+
+<!-- 9 HABITAT -->
+<section class="chap reveal" id="habitat">
+  <div class="container narrow">
+    <div class="chap-num">09 · ENVIRONMENT &amp; HABITAT</div>
+    <h2><span class="en">Two confined cousins, one global outlier</span><span class="zh">两位受限的近亲，一位全球异类</span></h2>
+
+    <div class="tri-grid">
+      <div class="tc chimp">
+        <div class="label"><span class="en">Chimpanzee Range</span><span class="zh">黑猩猩分布</span></div>
+        <p><span class="en">Equatorial Africa across 21 countries — Senegal east to Tanzania, north of the Congo River. Population: ~170,000-300,000 (down from ~1M a century ago). IUCN Endangered.</span><span class="zh">赤道非洲 21 国——西起塞内加尔、东至坦桑尼亚，刚果河以北。种群：约 17-30 万（比一世纪前的约 100 万大幅下降）。IUCN 濒危。</span></p>
+      </div>
+      <div class="tc bonobo">
+        <div class="label"><span class="en">Bonobo Range</span><span class="zh">倭黑猩猩分布</span></div>
+        <p><span class="en">A single country (DRC), south of the Congo River. Approximately 15,000-20,000 individuals remaining. The most range-restricted great ape after humans. IUCN Endangered.</span><span class="zh">仅刚果民主共和国一国，刚果河以南。剩余约 1.5-2 万只。除人类外分布范围最受限的大猿。IUCN 濒危。</span></p>
+      </div>
+      <div class="tc human">
+        <div class="label"><span class="en">Human Range</span><span class="zh">人类分布</span></div>
+        <p><span class="en">Every continent including Antarctica (~1,000 winter residents). 8.1 billion alive. The first ape to live above the Arctic Circle, on the deep ocean, and in low-Earth orbit.</span><span class="zh">所有大洲，包括南极洲（约 1,000 名冬季驻留者）。在世人口 81 亿。首个生活于北极圈以北、深海与近地轨道的猿类。</span></p>
+      </div>
+    </div>
+
+    <div class="insight">
+      <div class="lab"><span class="en">Conservation Reality</span><span class="zh">保护现实</span></div>
+      <p><span class="en">Both Pan species are endangered, primarily by habitat loss, hunting (bushmeat), and disease (Ebola hits chimps especially hard). Without intervention, both could be functionally extinct in the wild within 50 years. Most of what we know about them comes from fewer than a dozen long-term study sites.</span><span class="zh">两种黑猩猩属物种均濒危，主因是栖息地丧失、狩猎（丛林肉）与疾病（埃博拉对黑猩猩打击尤重）。若无干预，二者在野外的功能性灭绝可能在 50 年内发生。我们对它们的所知，大多来自不到十二处长期研究地点。</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- 10 ETHICS -->
+<section class="chap reveal" id="ethics">
+  <div class="container narrow">
+    <div class="chap-num">10 · ETHICS &amp; PHILOSOPHY</div>
+    <h2><span class="en">What — exactly — defines "human"?</span><span class="zh">究竟什么——准确说——定义了「人」？</span></h2>
+    <p>
+      <span class="en">For most of Western intellectual history, "human" meant: <em>language</em>, <em>tool use</em>, <em>self-awareness</em>, <em>morality</em>, <em>culture</em>, <em>warfare</em>, <em>art</em>. One by one, every item on this list has been at least partially demonstrated in chimpanzees or bonobos. What survives uncontested is narrower than expected:</span>
+      <span class="zh">在西方思想史的大多数时期，「人」意味着：<em>语言</em>、<em>工具使用</em>、<em>自我意识</em>、<em>道德</em>、<em>文化</em>、<em>战争</em>、<em>艺术</em>。这份清单上每一项都已在黑猩猩或倭黑猩猩身上被至少部分地证明过。无可争议地存留下来的，比预期狭窄得多：</span>
+    </p>
+    <ul>
+      <li><span class="en"><strong>Cumulative culture</strong> with reliable cross-generational improvement.</span><span class="zh"><strong>具有可靠跨代改进的累积性文化。</strong></span></li>
+      <li><span class="en"><strong>Recursive, generative language</strong> with infinite expressive output.</span><span class="zh"><strong>递归、生成性、表达力无限的语言。</strong></span></li>
+      <li><span class="en"><strong>Cooperation with strangers</strong> at multi-million-individual scales.</span><span class="zh"><strong>百万、千万级规模上的与陌生人协作。</strong></span></li>
+      <li><span class="en"><strong>Symbolic representation</strong> beyond the immediate moment — past, future, and counterfactual.</span><span class="zh"><strong>超越当下时刻的符号表征</strong>——过去、未来与反事实。</span></li>
+      <li><span class="en"><strong>Self-modification</strong> — humans alter their own anatomy (clothing, surgery), genes (CRISPR), and biology (medicine) deliberately.</span><span class="zh"><strong>自我改造</strong>——人类有意改变自身解剖（衣着、手术）、基因（CRISPR）与生物学（医学）。</span></li>
+    </ul>
+    <p>
+      <span class="en">Of these, only the first three are <em>certainly</em> exclusive to humans. The fourth is debated. The fifth is <em>strong</em>ly human-specific but recent. None of these are biological — they all arise from culture, language, and time.</span>
+      <span class="zh">其中只有前三项<em>确定</em>为人类独有。第四项有争议。第五项虽<em>强烈</em>地人类特异，但属近代产物。其中任何一项都不是生物性的——皆出自文化、语言与时间。</span>
+    </p>
+  </div>
+</section>
+
+<!-- 11 AI -->
+<section class="chap reveal" id="ai">
+  <div class="container">
+    <div class="chap-num">11 · BEYOND PRIMATES — HUMAN vs PRIMATE vs AI</div>
+    <h2><span class="en">Three kinds of mind</span><span class="zh">三种心智</span></h2>
+    <p>
+      <span class="en">The chimpanzee–human comparison was the only "intelligent neighbor" comparison available for 200 years. In the 2020s, a third comparison emerged: large language models. They are not biological, not embodied, not evolved — but they manipulate language and reason about novel situations in ways no non-human animal ever has. Comparing all three sharpens what each actually is.</span>
+      <span class="zh">在 200 年间，黑猩猩-人类对照是唯一可得的「智慧邻人」对照。2020 年代起，第三种对照出现：大语言模型。它们既非生物、亦无身体、亦未经演化——但其操纵语言、对新情境进行推理的方式，是任何非人动物所未及。三方对比，能让每一方真正所是为何变得更清晰。</span>
+    </p>
+
+    <div class="aitri">
+      <div class="acard primate">
+        <div class="lab"><span class="en">Great Apes (Chimp · Bonobo)</span><span class="zh">大猿（黑猩猩 · 倭黑猩猩）</span></div>
+        <h4><span class="en">Embodied · Evolved</span><span class="zh">具身 · 演化而来</span></h4>
+        <ul>
+          <li><b><span class="en">Substrate</span><span class="zh">基质</span></b><span class="en">Biological neurons, ~370 cc brain, ~6 Mya of selection pressure on social cognition.</span><span class="zh">生物神经元，约 370 cc 大脑，约 600 万年针对社会认知的选择压力。</span></li>
+          <li><b><span class="en">Memory</span><span class="zh">记忆</span></b><span class="en">Episodic memory of events, locations, social allies. No external storage.</span><span class="zh">对事件、地点、社会盟友的情景记忆。无外部存储。</span></li>
+          <li><b><span class="en">Limit</span><span class="zh">极限</span></b><span class="en">Cultural plateau — symbols and tool use exist but don't ratchet upward.</span><span class="zh">文化触顶——符号与工具存在，但不向上累积。</span></li>
+        </ul>
+      </div>
+      <div class="acard human">
+        <div class="lab"><span class="en">Humans</span><span class="zh">人类</span></div>
+        <h4><span class="en">Embodied · Cultural</span><span class="zh">具身 · 文化性</span></h4>
+        <ul>
+          <li><b><span class="en">Substrate</span><span class="zh">基质</span></b><span class="en">Biological neurons (~3.7× chimp brain mass) + external scaffolding: writing, institutions, machines.</span><span class="zh">生物神经元（约黑猩猩脑量 3.7 倍）+ 外部脚手架：文字、制度、机器。</span></li>
+          <li><b><span class="en">Memory</span><span class="zh">记忆</span></b><span class="en">Personal episodic + cultural collective memory (libraries, internet) — a single brain plus 10,000 years of accumulated text.</span><span class="zh">个人情景记忆 + 文化集体记忆（图书馆、互联网）——一颗大脑加上 10,000 年累积的文本。</span></li>
+          <li><b><span class="en">Limit</span><span class="zh">极限</span></b><span class="en">Bottlenecked by individual lifespan, attention, and emotional bandwidth.</span><span class="zh">受个体寿命、注意力与情绪带宽限制。</span></li>
+        </ul>
+      </div>
+      <div class="acard ai">
+        <div class="lab"><span class="en">Frontier AI (LLMs)</span><span class="zh">前沿 AI（大语言模型）</span></div>
+        <h4><span class="en">Disembodied · Trained</span><span class="zh">非具身 · 训练而成</span></h4>
+        <ul>
+          <li><b><span class="en">Substrate</span><span class="zh">基质</span></b><span class="en">~10¹² silicon parameters. No body, no continuous experience, no evolutionary history. Trained on ~50× more text than a human reads in a lifetime.</span><span class="zh">约 10¹² 硅基参数。无身体、无连续经验、无演化史。训练文本量约为一个人毕生阅读量的 50 倍。</span></li>
+          <li><b><span class="en">Memory</span><span class="zh">记忆</span></b><span class="en">Frozen weights + sliding context window. No episodic memory between conversations unless externally augmented.</span><span class="zh">冻结权重 + 滑动上下文窗口。除非外部增强，否则跨对话无情景记忆。</span></li>
+          <li><b><span class="en">Limit</span><span class="zh">极限</span></b><span class="en">No grounding in physical world. Sometimes confabulates with confidence. Cannot want, fear, or love — at least not in any way we'd recognize.</span><span class="zh">缺乏对物理世界的扎根。有时充满自信地编造。无法欲望、恐惧或爱——至少不以任何我们可识别的方式。</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="insight">
+      <div class="lab"><span class="en">The Reframe</span><span class="zh">重新框架</span></div>
+      <p><span class="en">For 6 million years, "intelligence" meant the chimp-to-human direction — bigger brain, better tools, more language. In the 2020s, that direction broke. AI systems are not on the chimp-to-human axis; they're on a different axis entirely. Future intelligence might not be a smarter human — it might be a non-human intelligence with neither evolution nor embodiment.</span><span class="zh">六百万年来，「智能」意味着黑猩猩到人类的方向——更大的脑、更好的工具、更多的语言。2020 年代，这个方向断裂了。AI 系统不在黑猩猩-人类轴上；它们处于完全不同的轴上。未来的智能或许不是「更聪明的人」——而是既无演化、亦无具身的非人智能。</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- 12 FUTURE -->
+<section class="chap reveal" id="future">
+  <div class="container narrow">
+    <div class="chap-num">12 · FUTURE EVOLUTION &amp; INTELLIGENCE</div>
+    <h2><span class="en">Where does this go?</span><span class="zh">这一切走向何方？</span></h2>
+    <p>
+      <span class="en">Speculative — but bounded by what we know. Three forecast horizons:</span>
+      <span class="zh">推测性——但以已知为界。三种预测视角：</span>
+    </p>
+
+    <div class="tri-grid">
+      <div class="tc chimp">
+        <div class="label"><span class="en">Pan · 100 years</span><span class="zh">Pan · 100 年</span></div>
+        <p><span class="en">Without intervention, both chimps and bonobos may be functionally extinct in the wild by 2125. Genetic preservation in zoos and reserves becomes the only viable continuation. We may be the last generation to share the planet with self-organizing wild populations of our closest cousins.</span><span class="zh">若无干预，黑猩猩与倭黑猩猩到 2125 年可能在野外功能性灭绝。动物园与保护区的遗传保存或成唯一延续路径。我们或许是与最亲近的近亲野外自组织种群共享地球的最后一代。</span></p>
+      </div>
+      <div class="tc human">
+        <div class="label"><span class="en">Homo sapiens · 1000 years</span><span class="zh">Homo sapiens · 1000 年</span></div>
+        <p><span class="en">Genetically: trivial change unless deliberate (CRISPR, gene drives) or catastrophic. Culturally: unrecognizable. The interesting question is whether "Homo sapiens" remains a coherent category — or splits, augments, hybridizes with machines, or differentiates by spaceflight isolation.</span><span class="zh">基因上：除非主动改造（CRISPR、基因驱动）或灾难性事件，变化甚小。文化上：面目全非。有趣的问题是「智人」是否仍是连贯类别——抑或分化、增强、与机器融合、或因星际隔离而分化。</span></p>
+      </div>
+      <div class="tc human">
+        <div class="label"><span class="en">Mind itself · open</span><span class="zh">心智本身 · 开放问题</span></div>
+        <p><span class="en">If artificial general intelligence emerges, the chimp-to-human story stops being the most interesting one. The future of "intelligence" may be largely non-human, non-embodied, post-evolutionary — and the chimps and humans both become historical curiosities preserved in the same archives.</span><span class="zh">若通用人工智能出现，黑猩猩到人类这段叙事将不再是最重要的故事。「智能」的未来或许主要是非人、非具身、后演化的——黑猩猩与人类都将成为同一档案中保存的历史样本。</span></p>
+      </div>
+    </div>
+
+    <div class="insight">
+      <div class="lab"><span class="en">Honest Closing</span><span class="zh">诚实的结语</span></div>
+      <p><span class="en">We are extraordinarily lucky to be alive at the moment all three of these intelligences (Pan, Homo, AI) overlap. None of them has met the others as equals before. None of them may again. The chimp may not survive us; the human may not survive what comes after. The window in which the comparison is even possible is short.</span><span class="zh">我们极幸运地生活在三种智能（Pan、Homo、AI）同时存在的此刻。它们此前从未以平等姿态相遇。也或许此后不再相遇。黑猩猩或许活不过我们；人类或许活不过其后所来。此对照得以成立的窗口期，极为短暂。</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- REFERENCES -->
+<section class="chap reveal" id="refs">
+  <div class="container narrow">
+    <div class="chap-num">REF · SCIENTIFIC SOURCES</div>
+    <h2><span class="en">Where this came from</span><span class="zh">所据来源</span></h2>
+
+    <div class="refs">
+      <strong><span class="en">Selected sources</span><span class="zh">主要参考文献</span></strong>
+      <ol>
+        <li>de Waal, F. (1989). <em>Peacemaking Among Primates</em>. Harvard University Press.</li>
+        <li>de Waal, F. (1997). <em>Bonobo: The Forgotten Ape</em>. University of California Press.</li>
+        <li>Tomasello, M. (2014). <em>A Natural History of Human Thinking</em>. Harvard University Press.</li>
+        <li>Tomasello, M. (2019). <em>Becoming Human: A Theory of Ontogeny</em>. Harvard University Press.</li>
+        <li>Goodall, J. (1986). <em>The Chimpanzees of Gombe: Patterns of Behavior</em>. Harvard University Press.</li>
+        <li>Gallup, G. G. (1970). "Chimpanzees: Self-recognition." <em>Science</em>, 167(3914), 86–87.</li>
+        <li>Inoue, S. &amp; Matsuzawa, T. (2007). "Working memory of numerals in chimpanzees." <em>Current Biology</em>, 17(23), R1004-R1005.</li>
+        <li>Savage-Rumbaugh, S., et al. (1998). <em>Apes, Language, and the Human Mind</em>. Oxford University Press.</li>
+        <li>The Chimpanzee Sequencing and Analysis Consortium (2005). "Initial sequence of the chimpanzee genome." <em>Nature</em>, 437(7055), 69–87.</li>
+        <li>Prüfer, K., et al. (2012). "The bonobo genome compared with the chimpanzee and human genomes." <em>Nature</em>, 486(7404), 527–531.</li>
+        <li>Pollard, K. S., et al. (2006). "An RNA gene expressed during cortical development evolved rapidly in humans." <em>Nature</em>, 443(7108), 167–172.</li>
+        <li>Hare, B. &amp; Woods, V. (2020). <em>Survival of the Friendliest</em>. Random House.</li>
+        <li>Boesch, C. (2009). <em>The Real Chimpanzee: Sex Strategies in the Forest</em>. Cambridge University Press.</li>
+        <li>Wrangham, R. (2009). <em>Catching Fire: How Cooking Made Us Human</em>. Basic Books.</li>
+        <li>IUCN Red List (2025 assessments) for <em>Pan troglodytes</em> and <em>Pan paniscus</em>.</li>
+      </ol>
+    </div>
+
+    <p style="font-size:13px;color:var(--fg-3);max-width:65ch;">
+      <span class="en"><em>Numerical figures (DNA percentages, lifespans, populations) are best-current-consensus values; ranges and dates compress active scientific debate. This page is curated for accessibility, not academic precision.</em></span>
+      <span class="zh"><em>数值（DNA 百分比、寿命、种群数）为目前主流共识值；范围与日期压缩了活跃的学术争论。本页为可读性而整理，并非追求学术精确。</em></span>
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p style="font-family:'Cormorant Garamond','Noto Serif SC',serif;font-style:italic;font-size:18px;color:var(--fg-2);line-height:1.6;max-width:60ch;">
+      <span class="en">An independent, bilingual atlas of comparative primatology. Not affiliated with any field site or research group. Errors are mine; insights belong to the scientists who did the work.</span>
+      <span class="zh">一份独立、双语的比较灵长类学图谱。与任何野外考察站或研究小组均无隶属。错误归我；洞见归于做出真正研究的科学家。</span>
+    </p>
+    <div class="foot-bottom">
+      <span><span class="en">Part of the</span><span class="zh">收录于</span> <a href="https://psyverse.fun">Psyverse</a> <span class="en">portfolio</span><span class="zh">作品集</span></span>
+      <span class="en">Compiled April 2026 · 12 sections · 15 sources</span>
+      <span class="zh">编纂于 2026 年 4 月 · 12 章节 · 15 篇文献</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://analytics-dashboard-two-blue.vercel.app/tracker.js" defer></script>
+<script>
+// Reveal on scroll
+(function () {
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: 0.08 });
+  els.forEach((el) => io.observe(el));
+})();
+
+// Cognition radar chart
+(function () {
+  const canvas = document.getElementById('radar-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const dpr = window.devicePixelRatio || 1;
+  const W = 500, H = 500;
+  canvas.width = W * dpr; canvas.height = H * dpr;
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+  const dimensions = [
+    {en: "Tool Use", zh: "工具使用", chimp: 80, bonobo: 65, human: 100},
+    {en: "Mirror Test", zh: "镜像测试", chimp: 75, bonobo: 75, human: 95},
+    {en: "Theory of Mind", zh: "心智理论", chimp: 55, bonobo: 60, human: 100},
+    {en: "Working Memory", zh: "工作记忆", chimp: 90, bonobo: 70, human: 80},
+    {en: "Cumulative Culture", zh: "累积文化", chimp: 25, bonobo: 25, human: 100},
+    {en: "Recursive Language", zh: "递归语言", chimp: 5, bonobo: 10, human: 100},
+    {en: "Cooperation w/ Strangers", zh: "陌生人协作", chimp: 15, bonobo: 35, human: 95},
+    {en: "Empathy / Consolation", zh: "共情与安抚", chimp: 65, bonobo: 90, human: 85},
+  ];
+
+  const active = { chimp: true, bonobo: true, human: true };
+  const colors = {
+    chimp:  { stroke: '#d97706', fill: 'rgba(217,119,6,0.18)' },
+    bonobo: { stroke: '#e11d48', fill: 'rgba(225,29,72,0.18)' },
+    human:  { stroke: '#0891b2', fill: 'rgba(8,145,178,0.18)' },
+  };
+
+  function getLang() { return document.body.classList.contains('zh-mode') ? 'zh' : 'en'; }
+  function getFG() {
+    const isLight = document.body.classList.contains('light');
+    return isLight ? '#5a4a35' : '#c4b5a0';
+  }
+  function getLine() {
+    const isLight = document.body.classList.contains('light');
+    return isLight ? 'rgba(184,170,142,0.5)' : 'rgba(74,61,48,0.7)';
+  }
+
+  function draw() {
+    const cx = W / 2, cy = H / 2;
+    const radius = 175;
+    const n = dimensions.length;
+    ctx.clearRect(0, 0, W, H);
+
+    // Grid rings
+    ctx.strokeStyle = getLine();
+    ctx.lineWidth = 0.5;
+    for (let r = 1; r <= 5; r++) {
+      ctx.beginPath();
+      for (let i = 0; i <= n; i++) {
+        const a = (i / n) * Math.PI * 2 - Math.PI / 2;
+        const x = cx + Math.cos(a) * radius * (r / 5);
+        const y = cy + Math.sin(a) * radius * (r / 5);
+        if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+      }
+      ctx.stroke();
+    }
+    // Spokes
+    for (let i = 0; i < n; i++) {
+      const a = (i / n) * Math.PI * 2 - Math.PI / 2;
+      ctx.beginPath();
+      ctx.moveTo(cx, cy);
+      ctx.lineTo(cx + Math.cos(a) * radius, cy + Math.sin(a) * radius);
+      ctx.stroke();
+    }
+    // Labels
+    const lang = getLang();
+    ctx.fillStyle = getFG();
+    ctx.font = '11px "Space Grotesk", sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    for (let i = 0; i < n; i++) {
+      const a = (i / n) * Math.PI * 2 - Math.PI / 2;
+      const lx = cx + Math.cos(a) * (radius + 26);
+      const ly = cy + Math.sin(a) * (radius + 18);
+      const label = dimensions[i][lang];
+      // Wrap if too long
+      const maxLen = 14;
+      if (label.length > maxLen && lang === 'en') {
+        const words = label.split(' ');
+        let l1 = '', l2 = '';
+        for (const w of words) {
+          if ((l1 + ' ' + w).length <= maxLen) l1 = (l1 ? l1 + ' ' : '') + w;
+          else l2 = (l2 ? l2 + ' ' : '') + w;
+        }
+        ctx.fillText(l1, lx, ly - 6);
+        ctx.fillText(l2, lx, ly + 6);
+      } else {
+        ctx.fillText(label, lx, ly);
+      }
+    }
+
+    // Polygons
+    for (const sp of ['chimp', 'bonobo', 'human']) {
+      if (!active[sp]) continue;
+      ctx.beginPath();
+      for (let i = 0; i <= n; i++) {
+        const idx = i % n;
+        const a = (idx / n) * Math.PI * 2 - Math.PI / 2;
+        const v = dimensions[idx][sp] / 100;
+        const x = cx + Math.cos(a) * radius * v;
+        const y = cy + Math.sin(a) * radius * v;
+        if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+      }
+      ctx.closePath();
+      ctx.fillStyle = colors[sp].fill;
+      ctx.fill();
+      ctx.strokeStyle = colors[sp].stroke;
+      ctx.lineWidth = 1.6;
+      ctx.stroke();
+      // Vertices
+      for (let i = 0; i < n; i++) {
+        const a = (i / n) * Math.PI * 2 - Math.PI / 2;
+        const v = dimensions[i][sp] / 100;
+        const x = cx + Math.cos(a) * radius * v;
+        const y = cy + Math.sin(a) * radius * v;
+        ctx.beginPath();
+        ctx.arc(x, y, 2.5, 0, Math.PI * 2);
+        ctx.fillStyle = colors[sp].stroke;
+        ctx.fill();
+      }
+    }
+  }
+  draw();
+
+  // Toggle handlers
+  document.querySelectorAll('.species-toggle').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const sp = btn.dataset.sp;
+      active[sp] = !active[sp];
+      btn.classList.toggle('active');
+      draw();
+    });
+  });
+
+  // Re-draw on lang/theme change
+  const obs = new MutationObserver(draw);
+  obs.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+})();
+</script>
+</body>
+</html>
